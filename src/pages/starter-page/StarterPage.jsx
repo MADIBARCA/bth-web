@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { TonConnectButton } from '@tonconnect/ui-react';
 import './StarterPage.css'; // Import the updated CSS file
 
 const StarterPage = () => {
@@ -43,6 +44,8 @@ const StarterPage = () => {
   return (
     <div className="starter-container">
       <div className="starterPageBackgroundGradient" />
+
+      <TonConnectButton />
 
       {/* Display user info conditionally */}
       <h1 className="starter-title">
