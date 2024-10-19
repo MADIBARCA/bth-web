@@ -54,8 +54,7 @@
     border-radius: 8px;
   }
   
-  .form-group input,
-  .form-group textarea {
+  .formGroupInput {
     background: transparent;
     outline:  none;
     border: none;
@@ -63,13 +62,11 @@
     width: 100%;
   }
   
-  .form-group input:focus,
-  .form-group textarea:focus {
+  .formGroupInput:focus {
     outline: none;
   }
   
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
+  .formGroupInput::placeholder {
     color: #d8e4fd;
   }
 

@@ -1,5 +1,5 @@
-// CandidatePage.jsx
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './CandidatePage.css';
 
 const CandidatePage = () => {
@@ -8,6 +8,8 @@ const CandidatePage = () => {
   const [degree, setDegree] = useState('');
   const [resume, setResume] = useState(null);
   const [workExperience, setWorkExperience] = useState('');
+
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const degreeOptions = ['Don\'t have any', 'BSc', 'MSc', 'PhD'];
 
@@ -18,16 +20,19 @@ const CandidatePage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Handle form submission logic here
+    // Create a candidate data object
     const candidateData = {
       fullName,
       dateOfBirth,
       degree,
-      resume,
+      resume: resume ? resume.name : null, // Just pass the file name for display
       workExperience,
     };
 
     console.log('Candidate Data:', candidateData);
+
+    // Navigate to CandidateProfilePage with the candidate data
+    navigate('/candidate/profile', { state: { candidate: candidateData } });
 
     // Reset form fields after submission
     setFullName('');
@@ -52,6 +57,7 @@ const CandidatePage = () => {
             onChange={(e) => setFullName(e.target.value)}
             required
             placeholder="Enter your full name"
+            className='formGroupInput'
           />
         </div>
 
@@ -65,6 +71,7 @@ const CandidatePage = () => {
             value={dateOfBirth}
             onChange={(e) => setDateOfBirth(e.target.value)}
             required
+            className='formGroupInput'
           />
         </div>
 
@@ -77,6 +84,7 @@ const CandidatePage = () => {
             value={degree}
             onChange={(e) => setDegree(e.target.value)}
             required
+            className='formGroupInput'
           >
             <option value="" disabled>Select your degree</option>
             {degreeOptions.map((option) => (
@@ -97,6 +105,7 @@ const CandidatePage = () => {
             accept=".pdf,.doc,.docx"
             onChange={handleResumeUpload}
             required
+            className='formGroupInput'
           />
         </div>
 
@@ -111,6 +120,7 @@ const CandidatePage = () => {
             onChange={(e) => setWorkExperience(e.target.value)}
             required
             placeholder="Describe your work experience"
+            className='formGroupInput'
           ></textarea>
         </div>
 

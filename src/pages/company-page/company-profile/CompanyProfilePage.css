@@ -1,0 +1,170 @@
+/* src/CompanyProfilePage.css */
+
+/* Company profile styles */
+.company-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  padding: 40px 20px;
+  background: rgba(216, 230, 253, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.company-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 28px;
+  color: #A7C3FB;
+  margin-bottom: 15px;
+}
+
+.company-description {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.company-creation-date {
+  font-size: 16px;
+  color: #d8e4fd;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #ff4d4f;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Vacancies section */
+.vacancies-section {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.vacancies-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.no-vacancies {
+  font-size: 16px;
+  color: #d8e4fd;
+}
+
+.add-vacancy-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-vacancy-button:hover {
+  background-color: #1c86ee;
+}
+
+.vacancies-list {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.vacancy-item {
+  background: rgba(216, 230, 253, 0.08);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.vacancy-item h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.vacancy-item p {
+  font-size: 14px;
+  color: #d8e4fd;
+}
+
+.edit-vacancy-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-vacancy-button:hover {
+  background-color: #1c86ee;
+}
+
+/* Vacancy form */
+.vacancy-form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(216, 230, 253, 0.08);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.vacancy-form .form-group {
+  margin-bottom: 15px;
+}
+
+.vacancy-form .form-group label {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.vacancy-form .form-group input,
+.vacancy-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #d8e4fd;
+  background: transparent;
+  color: #ffffff;
+}
+
+.submit-vacancy-button {
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-vacancy-button:hover {
+  background-color: #1c86ee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .company-profile-container {
+    padding: 20px 15px;
+  }
+
+  .vacancies-section {
+    padding: 0 10px;
+  }
+}

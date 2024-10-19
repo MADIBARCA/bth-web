@@ -53,9 +53,7 @@
     border-radius: 8px;
   }
   
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
+  .formGroupInput {
     background: transparent;
     outline: none;
     border: none;
@@ -67,9 +65,7 @@
     color: #ffffff;
   }
   
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
+  .formGroupInput {
     outline: none;
   }
   
@@ -95,4 +91,5 @@
   .submit-button:hover {
     background-color: #1c86ee;
   }
+  
   
