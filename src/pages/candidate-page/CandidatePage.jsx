@@ -68,7 +68,7 @@ const CandidatePage = () => {
         console.log(resumeText);
 
         // Correctly access the generated description
-        const description = 'I’m Madi Abzhanov, a skilled software engineer with expertise in both frontend and backend development. I’ve worked extensively with JavaScript and TypeScript, using frameworks like React.js, Next.js, and Spring Boot. At Homecredit Bank, I developed and optimized financial systems, and at NFT Labs, I built large-scale NFT web apps for high-profile events. My experience includes database management with MySQL and MongoDB, and I’m passionate about crafting effective solutions. Outside of coding, I’m into Brazilian Jiu-Jitsu and have competed regionally.';
+        const description = 'I’m Aidos Tazhigulov, a skilled software engineer with expertise in both frontend and backend development. I’ve worked extensively with JavaScript and TypeScript, using frameworks like React.js, Next.js, and Spring Boot. At Homecredit Bank, I developed and optimized financial systems, and at NFT Labs, I built large-scale NFT web apps for high-profile events. My experience includes database management with MySQL and MongoDB, and I’m passionate about crafting effective solutions. Outside of coding, I’m into Brazilian Jiu-Jitsu and have competed regionally.';
 
         setGeneratedDescription(description);
       } catch (error) {
