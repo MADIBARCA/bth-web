@@ -1,11 +1,11 @@
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './CandidateProfilePage.css';
 
 const CandidateProfilePage = () => {
-  const location = useLocation();
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  // Access the candidate data passed via state
-  let candidate = location.state?.candidate;
+  // Retrieve the candidate data from localStorage
+  const candidate = JSON.parse(localStorage.getItem('candidateData'));
 
   // If no candidate data is found, return an error message
   if (!candidate) {
@@ -31,6 +31,16 @@ const CandidateProfilePage = () => {
         ) : (
           <p>No resume uploaded yet.</p>
         )}
+      </div>
+
+      {/* Button to browse vacancies */}
+      <div className="browse-vacancies-section">
+        <button
+          className="browse-vacancies-button"
+          onClick={() => navigate('/browse-vacancies')}
+        >
+          Browse Vacancies
+        </button>
       </div>
     </div>
   );

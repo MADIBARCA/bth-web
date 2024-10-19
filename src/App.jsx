@@ -7,6 +7,8 @@ import CandidatePage from './pages/candidate-page/CandidatePage';
 import CompanyProfilePage from './pages/company-page/company-profile/CompanyProfilePage';
 import InterviewerProfilePage from './pages/interviewer-page/interviewer-profile/InterviewerProfilePage';
 import CandidateProfilePage from './pages/candidate-page/candidate-profile/CandidateProfilePage';
+import BrowseVacanciesPage from './pages/browse-vaccancies/BrowseVacanciesPage';
+import VacancyDetailsPage from './pages/vacancy-details-page/VacancyDetailsPage';
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
         <Route path="/company/:id" element={<CompanyProfilePage />} /> {/* New Route */}
         <Route path="/interviewer/profile" element={<InterviewerProfilePage />} /> {/* New route */}
         <Route path="/candidate/profile" element={<CandidateProfilePage />} /> {/* New route */}
-
+        <Route path="/browse-vacancies" element={<BrowseVacanciesPage />} /> {/* New route */}
+        <Route path="/vacancy-details" element={<VacancyDetailsPage />} /> {/* New route */}
       </Routes>
     </Router>
   );

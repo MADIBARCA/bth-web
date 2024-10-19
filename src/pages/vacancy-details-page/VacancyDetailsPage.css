@@ -1,0 +1,51 @@
+.vacancy-details-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(216, 230, 253, 0.08);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .vacancy-title {
+    font-size: 32px;
+    color: #A7C3FB;
+    margin-bottom: 20px;
+  }
+  
+  .vacancy-company {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .vacancy-description {
+    font-size: 16px;
+    color: #d8e4fd;
+    margin-bottom: 30px;
+  }
+  
+  .apply-button {
+    padding: 15px 30px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .apply-button:hover {
+    background-color: #1c86ee;
+  }
+  
+  .thank-you-message {
+    font-size: 18px;
+    color: #00ff00;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    font-size: 24px;
+    color: #ff4d4f;
+    margin-top: 20px;
+  }

@@ -1,0 +1,71 @@
+/* src/BrowseVacanciesPage.css */
+
+.browse-vacancies-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(216, 230, 253, 0.08);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+}
+
+.back-to-profile-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.back-to-profile-button:hover {
+  background-color: #1c86ee;
+}
+
+.browse-vacancies-title {
+  font-size: 32px;
+  color: #A7C3FB;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #d8e4fd;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.vacancies-list {
+  margin-top: 20px;
+}
+
+.vacancy-item {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(216, 230, 253, 0.1);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.vacancy-item h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.vacancy-item p {
+  font-size: 16px;
+  color: #d8e4fd;
+}

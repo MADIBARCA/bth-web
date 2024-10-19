@@ -44,7 +44,6 @@
 }
 
 .form-group-inputWrapper {
-  font-size: 16px;
   border: 3px solid rgba(79, 94, 119, 0.314);
   background: transparent;
   font-weight: 500;
@@ -60,6 +59,7 @@
   border: none;
   color: #ffffff;
   width: 100%;
+  font-size: 20px;
 }
 
 .formGroupInput:focus {

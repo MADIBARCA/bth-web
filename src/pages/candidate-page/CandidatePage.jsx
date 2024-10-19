@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import './CandidatePage.css';
 
 const CandidatePage = () => {
@@ -29,10 +29,11 @@ const CandidatePage = () => {
       workExperience,
     };
 
-    console.log('Candidate Data:', candidateData);
+    // Save candidate data to localStorage
+    localStorage.setItem('candidateData', JSON.stringify(candidateData));
 
-    // Navigate to CandidateProfilePage with the candidate data
-    navigate('/candidate/profile', { state: { candidate: candidateData } });
+    // Navigate to CandidateProfilePage without passing state
+    navigate('/candidate/profile');
 
     // Reset form fields after submission
     setFullName('');
@@ -125,7 +126,7 @@ const CandidatePage = () => {
         </div>
 
         <button type="submit" className="submit-button">
-        Complete
+          Complete
         </button>
       </form>
     </div>
