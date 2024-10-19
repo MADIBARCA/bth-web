@@ -1,6 +1,4 @@
 .vacancy-details-container {
-    width: 90%;
-    margin: 0 auto;
     padding: 40px;
     background-color: rgba(216, 230, 253, 0.08);
     border-radius: 8px;
@@ -11,6 +9,7 @@
     font-size: 32px;
     color: #A7C3FB;
     margin-bottom: 20px;
+    margin-top: 90px;
   }
   
   .vacancy-company {

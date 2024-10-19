@@ -1,41 +1,61 @@
-/* src/CandidateProfilePage.css */
-
 .candidate-profile-container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: rgba(216, 230, 253, 0.08);
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .candidate-name {
-    font-size: 32px;
-    color: #A7C3FB;
-    margin-bottom: 20px;
-  }
-  
-  .candidate-dob, .candidate-degree, .candidate-experience {
-    font-size: 18px;
-    color: #ffffff;
-    margin-bottom: 10px;
-  }
-  
-  .resume-section {
-    margin-top: 30px;
-  }
-  
-  .resume-section p {
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
-  .error-message {
-    font-size: 24px;
-    color: #ff4d4f;
-    margin-top: 20px;
-  }
-  
-  .browse-vacancies-button {
-    background: black;
-  }
+  padding: 40px;
+  background-color: rgba(216, 230, 253, 0.08);
+  border-radius: 8px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.avatar-section {
+  margin-bottom: 20px;
+}
+
+.candidate-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.candidate-name {
+  font-size: 32px;
+  color: #A7C3FB;
+  margin-bottom: 20px;
+}
+
+.candidate-dob, .candidate-degree, .candidate-experience {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.resume-section {
+  margin-top: 30px;
+}
+
+.resume-section p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #ff4d4f;
+  margin-top: 20px;
+}
+
+.browse-vacancies-section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.browse-vacancies-button {
+  margin-top: 40px;
+  font-weight: 600;
+  background: #A7C3FB;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { FiDownload } from 'react-icons/fi'; // Import the download icon
 import './CandidateProfilePage.css';
 
 const CandidateProfilePage = () => {
@@ -16,22 +17,55 @@ const CandidateProfilePage = () => {
     );
   }
 
+  // Function to calculate age from the date of birth
+  const calculateAge = (dob) => {
+    const birthDate = new Date(dob);
+    const difference = Date.now() - birthDate.getTime();
+    const ageDate = new Date(difference); 
+    return Math.abs(ageDate.getUTCFullYear() - 1970); // Calculate the difference in years
+  };
+
+  // Function to handle resume download
+  const handleResumeDownload = () => {
+    const fileUrl = URL.createObjectURL(candidate.resume); // Assuming you have the resume file object stored
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = candidate.resume; // Use the candidate resume file name for download
+    link.click();
+  };
+
   return (
     <div className="candidate-profile-container">
-      <h1 className="candidate-name">{candidate.fullName}</h1>
-      <p className="candidate-dob">Date of Birth: {candidate.dateOfBirth}</p>
-      <p className="candidate-degree">Degree: {candidate.degree}</p>
-      <p className="candidate-experience">{candidate.workExperience}</p>
+      {/* Conditionally render the avatar if uploaded */}
+      {candidate.avatar && (
+        <div className="avatar-section">
+          <img
+            src={URL.createObjectURL(candidate.avatar)} // Display the avatar image
+            alt="Candidate Avatar"
+            className="candidate-avatar"
+          />
+        </div>
+      )}
 
-      {/* Resume Section */}
-      <div className="resume-section">
-        <h2>Resume</h2>
+      <h1 className="candidate-name">{candidate.fullName}</h1>
+      <p className="candidate-age">{calculateAge(candidate.dateOfBirth)} years</p>
+
+      
+      <p className="candidate-degree">Degree: {candidate.degree}</p>
+
+            {/* Resume Section */}
+            <div className="resume-section">
         {candidate.resume ? (
-          <p>Uploaded Resume: {candidate.resume}</p>
+          <button className="download-resume-button" onClick={handleResumeDownload}>
+            <FiDownload /> Download Resume
+          </button>
         ) : (
           <p>No resume uploaded yet.</p>
         )}
       </div>
+      <p className="candidate-experience">{candidate.workExperience}</p>
+
+
 
       {/* Button to browse vacancies */}
       <div className="browse-vacancies-section">
@@ -40,6 +74,13 @@ const CandidateProfilePage = () => {
           onClick={() => navigate('/browse-vacancies')}
         >
           Browse Vacancies
+        </button>
+
+        <button
+              className="browse-vacancies-button"
+              onClick={() => navigate('/browse-interviewers')}    
+        >
+            Browse Interviewers
         </button>
       </div>
     </div>

@@ -9,6 +9,8 @@ import InterviewerProfilePage from './pages/interviewer-page/interviewer-profile
 import CandidateProfilePage from './pages/candidate-page/candidate-profile/CandidateProfilePage';
 import BrowseVacanciesPage from './pages/browse-vaccancies/BrowseVacanciesPage';
 import VacancyDetailsPage from './pages/vacancy-details-page/VacancyDetailsPage';
+import BrowseInterviewersPage from './pages/browse-interviewers/BrowseInterviewersPage';
+import InterviewersDetailsPage from './pages/interviewers-details-page/InterviewersDetailPage';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/candidate/profile" element={<CandidateProfilePage />} /> {/* New route */}
         <Route path="/browse-vacancies" element={<BrowseVacanciesPage />} /> {/* New route */}
         <Route path="/vacancy-details" element={<VacancyDetailsPage />} /> {/* New route */}
+        <Route path="/browse-interviewers" element={<BrowseInterviewersPage />} /> {/* New route */}
+        <Route path="/interviewer-details" element={<InterviewersDetailsPage/>} />
       </Routes>
     </Router>
   );

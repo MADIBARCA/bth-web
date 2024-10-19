@@ -32,9 +32,10 @@ const BrowseVacanciesPage = () => {
   return (
     <div className="browse-vacancies-container">
       {/* Back to Profile Button */}
-      <button className="back-to-profile-button" onClick={handleBackToProfileClick}>
-        ← Back to Profile
-      </button>
+        <button className="back-to-profile-button" onClick={handleBackToProfileClick}>
+          ⬅ Back
+        </button>
+
 
       <h1 className="browse-vacancies-title">Browse Job Vacancies</h1>
 

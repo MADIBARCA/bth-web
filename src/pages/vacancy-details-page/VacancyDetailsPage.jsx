@@ -33,7 +33,7 @@ const VacancyDetailsPage = () => {
     <div className="vacancy-details-container">
       {/* Back Button */}
       <button className="back-button" onClick={handleBackClick}>
-        ← Back to Vacancies
+      ⬅ Back to Vacancies
       </button>
 
       <h1 className="vacancy-title">{vacancy.title}</h1>
