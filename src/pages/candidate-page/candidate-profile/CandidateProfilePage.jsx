@@ -37,7 +37,7 @@ const CandidateProfilePage = () => {
   return (
     <div className="candidate-profile-container">
       {/* Conditionally render the avatar if uploaded */}
-      {candidate.avatar && (
+      {/* {candidate.avatar && (
         <div className="avatar-section">
           <img
             src={URL.createObjectURL(candidate.avatar)} // Display the avatar image
@@ -45,7 +45,7 @@ const CandidateProfilePage = () => {
             className="candidate-avatar"
           />
         </div>
-      )}
+      )} */}
 
       <h1 className="candidate-name">{candidate.fullName}</h1>
       <p className="candidate-age">{calculateAge(candidate.dateOfBirth)} years</p>
